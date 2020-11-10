@@ -3,9 +3,12 @@ package com.example.app2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,11 +22,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickevent(View view) {
+        switch (view.getId()){
+            case R.id.button:
+                   startHome();
+                   break;
+            case R.id.button2:
+                    Intent dintent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://srivasaviengg.ac.in/"));
+                    startActivity(dintent);
+        }
+
+    }
+
+    private void startHome() {
         Log.e(TAG,"clickevent");
-        Intent hintent = new Intent(MainActivity.this,HomeActivity.class);
+        Intent hintent = new Intent(MainActivity.this, HomeActivity.class);
         hintent.putExtra("name","viswa");
         startActivity(hintent);
     }
+
     @Override
     protected void onStart() {
         super.onStart();

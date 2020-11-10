@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
         //from extras get the string with key=name
         String data = extras.getString("name");
         //putting data
-        TextView resTextView = findViewById(R.id.button2);
+        TextView resTextView = findViewById(R.id.res);
         resTextView.setText(data);
     }
 }
