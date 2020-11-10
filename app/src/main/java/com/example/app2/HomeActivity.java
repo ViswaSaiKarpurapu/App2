@@ -6,7 +6,9 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -26,5 +28,14 @@ public class HomeActivity extends AppCompatActivity {
         //putting data
         TextView resTextView = findViewById(R.id.res);
         resTextView.setText(data);
+        String []language ={"Hindhi","telugu","urdu","english"};
+
+        ListView listView = findViewById(R.id.listview);
+        ArrayAdapter adapter = new ArrayAdapter<>(this,
+                //android.R.layout.simple_list_item_1,
+                R.layout.array_list,
+                language);
+        listView.setAdapter(adapter);
+
     }
 }
