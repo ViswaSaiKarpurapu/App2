@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startHome() {
+
         Log.e(TAG,"clickevent");
         Intent hintent = new Intent(MainActivity.this, HomeActivity.class);
         hintent.putExtra("name","viswa");
