@@ -1,7 +1,10 @@
 package com.example.app2;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,8 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class Myadapter extends RecyclerView.Adapter<Myadapter.WordViewHolder> {
     String[] languages;
-    public Myadapter(String[] languagesData) {
-        languages =languagesData;
+    LayoutInflater layoutInflater;
+
+    public Myadapter( Context context, String[] languagesData) {
+        languages = languagesData;
+//        LayoutInflater.from(context);
+        layoutInflater = LayoutInflater.from(context);
     }
 
     /**
@@ -25,8 +32,8 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.WordViewHolder> {
     @NonNull
     @Override
     public Myadapter.WordViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        return null;
+        View rowView = layoutInflater.inflate(R.layout.array_list,parent,false);
+        return new WordViewHolder(rowView);
     }
 
     /**
@@ -37,6 +44,8 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.WordViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull Myadapter.WordViewHolder holder, int position) {
 
+        holder.titleTextView.setText(languages[position]);
+
     }
 
     /**
@@ -45,7 +54,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.WordViewHolder> {
      */
     @Override
     public int getItemCount() {
-        return 0;
+        return  languages.length;
     }
 
     /**
@@ -53,8 +62,10 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.WordViewHolder> {
      */
 
     public class WordViewHolder extends RecyclerView.ViewHolder {
+        public TextView titleTextView;
         public WordViewHolder(@NonNull View itemView) {
             super(itemView);
+            titleTextView = itemView.findViewById(R.id.textViewResult);
         }
     }
 }

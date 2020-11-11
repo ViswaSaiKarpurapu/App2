@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AsyncActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="41dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bookinput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="78dp"
+        android:onClick="handleClick"
+        android:text="download"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintStart_toStartOf="@+id/bookinput"
+        app:layout_constraintTop_toBottomOf="@+id/bookinput" />
+
+    <EditText
+        android:id="@+id/bookinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/searchbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="215dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="68dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchbutton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="206dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="206dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+</androidx.constraintlayout.widget.ConstraintLayout>
