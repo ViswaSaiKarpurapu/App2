@@ -12,57 +12,50 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="54dp"
-        android:layout_marginBottom="41dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/bookinput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/searchbutton"
+        android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginBottom="78dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="61dp"
         android:onClick="handleClick"
-        android:text="download"
-        app:layout_constraintBottom_toTopOf="@+id/result"
-        app:layout_constraintStart_toStartOf="@+id/bookinput"
-        app:layout_constraintTop_toBottomOf="@+id/bookinput" />
+        android:text="@string/button_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookInput" />
 
     <EditText
-        android:id="@+id/bookinput"
+        android:id="@+id/bookInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="201dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/searchbutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/result"
-        android:layout_width="215dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginBottom="68dp"
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="206dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="206dp"
+        android:id="@+id/textViewauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="36dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
